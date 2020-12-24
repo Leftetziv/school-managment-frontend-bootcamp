@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Briefing Edit</title>
+    <link href="/css/global.css" rel="stylesheet" />
+    <link href="/css/form.css" rel="stylesheet" />
+    <link href="/css/header.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <a href="/html/index2.html">
+                <img class="logo" alt="Logo" src="/images/logo.png" width="150">
+            </a>
+            <div class="nav-menu">
+                <a href="/html/courses/courses-list.html">Courses</a>
+                <a href="/html/trainers/trainers-list.html">Trainers</a>
+                <a href="/html/students/student-list.html">Students</a>
+                <a href="/html/assignments/briefings-list.html">Briefings</a>
+                <a href="/html/assignments/submissions-list.html">Submissions</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h2 class="title">Modify Briefing
+        </h2>
+
+        <form action="">
+            <div class="grid-container">
+                <input type="number" name="id" hidden value="12345">
+
+                <div class="span-350-grid-1c">
+                    <label for="title">Title: </label>
+                    <input type="text" name="title" id="title" maxlength="30" placeholder="Briefing title.." />
+                </div>
+
+                <div class="span-350-grid-1c">
+                    <label for="oral_mark">Max Oral Mark: </label>
+                    <input type="number" name="max_oral_mark" id="oral_mark" placeholder="Enter the max oral mark.." />
+                </div>
+
+                <div class="span-350-grid-1c">
+                    <label for="total_mark">Max Total Mark: </label>
+                    <input type="number" name="max_total_mark" id="total_mark"
+                        placeholder="Enter the max total mark.." />
+                </div>
+
+                <div class="span-350-grid-1c">
+                    <label>Submission due date and time:</label>
+                    <div class="datetime">
+                        <input type="date" name="date" class="datetime-date-input" />
+                        <input type="time" name="time" class="datetime-time-input" />
+                    </div>
+                </div>
+
+                <div class="span-350-grid-1c">
+                    <label>Course:</label>
+                    <input type="text" value="1 - CB12 - Java - Full Time" name="course" disabled
+                        placeholder="Enter the course.." />
+                </div>
+
+                <div class="span-350-grid-1c">
+                    <div><input type="radio" name="isproject" value="1" checked disabled>
+                        <label for="individual">Individual project</label>
+                    </div>
+                    <div><input type="radio" name="isproject" value="0" disabled>
+                        <label for="group">Group project</label>
+                    </div>
+                </div>
+
+                <div class="span-600-grid-1c">
+                    <label for="description">Description:</label>
+                    <textarea name="description" id="description" rows="10"
+                        placeholder="Enter the description.."></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <input type="submit" value="Add" class="submit-button" />
+                    <input type="submit" value="Return" class="submit-button" />
+                </div>
+
+            </div>
+        </form>
+
+    </main>
+    <footer>Tziv Designs. Travel back in time with us!</footer>
+</body>
+
+</html>

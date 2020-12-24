@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainers per Course</title>
+    <link href="/css/global.css" rel="stylesheet" />
+    <link href="/css/form.css" rel="stylesheet" />
+    <link href="/css/header.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <a href="/html/index2.html">
+                <img class="logo" alt="Logo" src="/images/logo.png" width="150">
+            </a>
+            <div class="nav-menu">
+                <a href="/html/courses/courses-list.html">Courses</a>
+                <a href="/html/trainers/trainers-list.html">Trainers</a>
+                <a href="/html/students/student-list.html">Students</a>
+                <a href="/html/assignments/briefings-list.html">Briefings</a>
+                <a href="/html/assignments/submissions-list.html">Submissions</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h2 class="title">Trainers per Course
+        </h2>
+
+        <form action="">
+            <div class="grid-container">
+
+                <div class="span-350-grid-1c">
+                    <label for="course">Course:</label>
+                    <input list="courses_list" name="course" id="course" placeholder="Enter the course.." />
+                    <datalist id="courses_list">
+                        <option value="1 - CB12 - Java - Full Time">CB12 - Java - Full Time</option>
+                        <option value="2 - CB12 - Java - Part Time">CB12 - Java - Part Time</option>
+                        <option value="3 - CB12 - Java - Full Time">CB12 - C# - Full Time</option>
+                        <option value="4 - CB12 - C# - Part Time">CB12 - C# - Part Time</option>
+                        <option value="5 - CB13 - Python - Part Time">CB13 - Python - Part Time</option>
+                    </datalist>
+                    </input>
+                </div>
+
+                <div class="span-600-grid-1c">
+                    <fieldset>
+                        <legend>Trainers teaching</legend>
+
+                        <div class="select-list">
+                            <input list="trainers-list" name="trainers" id="trainers"
+                                placeholder="Select a trainer to assign him" class="input select-list-input">
+                            <datalist id="trainers-list">
+                                <option value="1 - trainer 1">Student 1</option>
+                                <option value="2 - trainer 2">Student 2</option>
+                                <option value="3 - trainer 3">Student 3</option>
+                                <option value="4 - trainer 4">Student 4</option>
+                            </datalist>
+                            <button type="button" class="select-list-add-button">Assign Trainer</button>
+                        </div>
+
+                        <table>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Subject</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Leyteris Tzivanis</td>
+                                <td>Java</td>
+                                <td><button type="button" class="select-list-delete-button"><i
+                                            class="material-icons">delete</i></button></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Leyteris Tzivanis</td>
+                                <td>HTML</td>
+                                <td>
+                                    <button type="button" class="select-list-delete-button">
+                                        <i class="material-icons">delete</i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </fieldset>
+                </div>
+
+                <div class="form-buttons">
+                    <input type="submit" value="Save" class="submit-button" />
+                    <input type="submit" value="Return" class="submit-button" />
+                </div>
+
+            </div>
+        </form>
+
+    </main>
+    <footer>Tziv Designs. Travel back in time with us!</footer>
+</body>
+
+</html>

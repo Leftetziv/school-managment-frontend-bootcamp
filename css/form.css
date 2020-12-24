@@ -1,0 +1,214 @@
+.title {
+  color: whitesmoke;
+  text-align: center;
+}
+
+form {
+  background-color: #e5eee865;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 750px;
+  margin: auto;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+}
+
+/* wrappers */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+}
+
+.span-350-grid-1c {
+  width: 100%;
+  max-width: 350px;
+  margin: 0.3rem;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.span-600-grid-1c {
+  width: 100%;
+  max-width: 600px;
+  margin: 0.3rem;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.form-buttons {
+  width: 100%;
+  max-width: 700px;
+  margin: 0.3rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.datetime {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.select-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* individual elements */
+label,
+legend {
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  font-size: 0.8rem;
+  border-radius: 0.4em;
+  height: 2rem;
+  border: none;
+  padding: 0.3rem 0.5rem;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* datetime */
+.datetime-date-input,
+.datetime-time-input {
+  width: 100%;
+  max-width: 170px;
+}
+.datetime-time-input {
+  margin-left: auto;
+}
+
+/* multiple choice selection componment */
+.select-list-input {
+  width: 100%;
+  max-width: 430px;
+  margin: auto;
+}
+
+input::placeholder {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* table */
+table {
+  font-size: 0.9rem;
+  width: 95%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+table td,
+table th {
+  padding: 0.3rem;
+}
+
+table th {
+  background-color: green;
+  color: white;
+}
+
+table tr > td:last-of-type {
+  text-align: center;
+}
+
+/* radio buttons */
+input[type="radio"] {
+  height: 0.8rem;
+  box-shadow: none;
+  margin-right: 0.8rem;
+}
+
+input[type="radio"]:after {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 15px;
+  top: -3px;
+  left: 0px;
+  position: relative;
+  background-color: white;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 3px solid white;
+}
+
+input[type="radio"]:checked:after {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 15px;
+  top: -3px;
+  left: 0px;
+  position: relative;
+  background-color: green;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 3px solid white;
+}
+
+input[type="radio"]:disabled:checked::after {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+input[type="radio"]:disabled::after,
+input[type="radio"]:disabled:checked::after {
+  cursor: not-allowed;
+}
+
+/* text area */
+textarea {
+  height: 10rem;
+  resize: vertical;
+}
+
+/* buttons */
+.select-list-add-button {
+  font-weight: bold;
+  font-size: 0.8rem;
+  width: 150px;
+  padding: 0.3rem;
+  color: white;
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin: auto;
+}
+
+.select-list-delete-button {
+  color: whitesmoke;
+  background-color: green;
+  cursor: pointer;
+  border: none;
+  transition-duration: 0.4s;
+  border-radius: 2px;
+}
+
+.submit-button {
+  font-weight: bold;
+  font-size: 0.8rem;
+  width: 300px;
+  margin-top: 1rem;
+  color: white;
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Creation</title>
+    <link href="/css/global.css" rel="stylesheet" />
+    <link href="/css/form.css" rel="stylesheet" />
+    <link href="/css/header.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <a href="/html/index2.html">
+                <img class="logo" alt="Logo" src="/images/logo.png" width="150">
+            </a>
+            <div class="nav-menu">
+                <a href="/html/courses/courses-list.html">Courses</a>
+                <a href="/html/trainers/trainers-list.html">Trainers</a>
+                <a href="/html/students/student-list.html">Students</a>
+                <a href="/html/assignments/briefings-list.html">Briefings</a>
+                <a href="/html/assignments/submissions-list.html">Submissions</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h2 class="title">Creating Submission
+        </h2>
+
+        <form action="">
+            <div class="grid-container">
+
+                <div class="span-350-grid-1c">
+                    <label for="oral_mark">Oral Mark: </label>
+                    <input type="number" name="oral_mark" id="oral_mark" placeholder="Enter the oral mark.." />
+                </div>
+
+                <div class="span-350-grid-1c">
+                    <label for="total_mark">Total Mark: </label>
+                    <input type="number" name="total_mark" id="total_mark" placeholder="Enter the total mark.." />
+                </div>
+
+                <div class="span-350-grid-1c">
+                    <label>Submission date and time:</label>
+                    <div class="datetime">
+                        <input type="date" name="date" class="datetime-date-input" />
+                        <input type="time" name="time" class="datetime-time-input" />
+                    </div>
+                </div>
+
+                <div class="span-350-grid-1c">
+                    <label for="briefings">Briefing:</label>
+                    <input list="briefings_list" name="briefings" id="briefings" placeholder="Enter the briefing.." />
+                    <datalist id="briefings_list">
+                        <option value="1 - Java assignment 1 part A">Java assignment 1 part A</option>
+                        <option value="2 - Java final assignment">Java final assignment</option>
+                    </datalist>
+                    </input>
+                </div>
+
+                <div class="span-600-grid-1c">
+                    <fieldset>
+                        <legend>Student(s) selection</legend>
+
+                        <div class="select-list">
+                            <input list="student-list" name="students" id="students"
+                                placeholder="Select the student(s) that commited the submission"
+                                class="input select-list-input">
+                            <datalist id="student-list">
+                                <option value="1 - Student1">Student 1</option>
+                                <option value="2 - Student2">Student 2</option>
+                                <option value="3 - Student3">Student 3</option>
+                                <option value="4 - Student4">Student 4</option>
+                            </datalist>
+                            <button type="button" class="select-list-add-button" onclick="add()">Add Student</button>
+                        </div>
+
+                        <table>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Date of birth</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Leyteris Tzivanis</td>
+                                <td>11-11-1111</td>
+                                <td><button type="button" class="select-list-delete-button"><i
+                                            class="material-icons">delete</i></button></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Leyteris Tzivanis</td>
+                                <td>11-11-1111</td>
+                                <td>
+                                    <button type="button" class="select-list-delete-button">
+                                        <i class="material-icons">delete</i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </fieldset>
+                </div>
+
+                <div class="form-buttons">
+                    <input type="submit" value="Add" class="submit-button" onclick="studentSelectAll()" />
+                    <input type="submit" value="Return" class="submit-button" />
+                </div>
+            </div>
+
+
+        </form>
+
+    </main>
+    <footer>Tziv Designs. Travel back in time with us!</footer>
+</body>
+
+</html>
