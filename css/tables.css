@@ -55,11 +55,13 @@ tr:nth-child(even) {
   background-color: #5c77d13a;
 }
 
-/* buttons */
-.create-new {
+/* href */
+.open-form-btn {
   font-weight: bold;
   font-size: 1rem;
   width: 300px;
+  display: inline-block;
+  text-align: center;
   margin: 2rem 0rem;
   padding: 0.3rem;
   color: white;
@@ -68,17 +70,25 @@ tr:nth-child(even) {
   border-radius: 5px;
   transition-duration: 0.4s;
   cursor: pointer;
+  text-decoration: none;
 }
 
+/* buttons */
 .table-button {
   color: whitesmoke;
   background-color: green;
   cursor: pointer;
   border: none;
-  transition-duration: 0.4s;
+  transition-duration: 0s;
   border-radius: 2px;
 }
 
-.create-new:hover {
+.modal-btn {
+  text-decoration: none;
+  color: black;
+}
+
+.create-new:hover,
+.open-form-btn:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

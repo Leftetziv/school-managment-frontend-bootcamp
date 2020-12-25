@@ -5,24 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submissions</title>
-    <link href="/css/global.css" rel="stylesheet" />
-    <link href="/css/tables.css" rel="stylesheet" />
-    <link href="/css/header.css" rel="stylesheet" />
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link href="../../css/tables.css" rel="stylesheet" />
+    <link href="../../css/header.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="../../js/filter-submissions.js"></script>
 </head>
 
 <body>
     <header>
         <div class="nav">
-            <a href="/html/index2.html">
-                <img class="logo" alt="Logo" src="/images/logo.png" width="150">
+            <a href="../index2.html">
+                <img class="logo" alt="Logo" src="../../images/logo.png" width="150">
             </a>
             <div class="nav-menu">
-                <a href="/html/courses/courses-list.html">Courses</a>
-                <a href="/html/trainers/trainers-list.html">Trainers</a>
-                <a href="/html/students/student-list.html">Students</a>
-                <a href="/html/assignments/briefings-list.html">Briefings</a>
-                <a class="active" href="/html/assignments/submissions-list.html">Submissions</a>
+                <a href="../courses/courses-list.html">Courses</a>
+                <a href="../trainers/trainers-list.html">Trainers</a>
+                <a href="../students/student-list.html">Students</a>
+                <a href="briefings-list.html">Briefings</a>
+                <a class="active" href="submissions-list.html">Submissions</a>
             </div>
         </div>
     </header>
@@ -30,8 +31,9 @@
         <h1 class="title">Submissions</h1>
 
         <div class="span-1200">
-            <button class="create-new">Create new</button>
-            <input type="text" id="briefing-search" placeholder="Search by briefing">
+            <a href="submission-add.html" class="open-form-btn">Create new</a>
+
+            <input type="text" id="briefing-search" placeholder="Search by briefing" onkeyup="filterRows(this)">
 
             <table>
                 <tr>
@@ -49,6 +51,24 @@
                     <td>88</td>
                     <td>12-12-1212 00.00</td>
                     <td>Java 1</td>
+                    <td>Leyteris Tziv, Foufou FaaaFaaa</td>
+                    <td><button type="button" class="table-button"><i class="material-icons">edit</i></button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>52</td>
+                    <td>78</td>
+                    <td>12-12-4444 00.00</td>
+                    <td>c# part b</td>
+                    <td>asdfg Tziv, rrrrtttyyy FaaaFaaa</td>
+                    <td><button type="button" class="table-button"><i class="material-icons">edit</i></button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>39</td>
+                    <td>90</td>
+                    <td>12-12-7653 00.00</td>
+                    <td>js 1</td>
                     <td>Leyteris Tziv, Foufou FaaaFaaa</td>
                     <td><button type="button" class="table-button"><i class="material-icons">edit</i></button></td>
                 </tr>

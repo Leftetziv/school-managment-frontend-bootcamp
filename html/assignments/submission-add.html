@@ -5,24 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submission Creation</title>
-    <link href="/css/global.css" rel="stylesheet" />
-    <link href="/css/form.css" rel="stylesheet" />
-    <link href="/css/header.css" rel="stylesheet" />
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link href="../../css/form.css" rel="stylesheet" />
+    <link href="../../css/header.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <div class="nav">
-            <a href="/html/index2.html">
-                <img class="logo" alt="Logo" src="/images/logo.png" width="150">
+            <a href="../index2.html">
+                <img class="logo" alt="Logo" src="../../images/logo.png" width="150">
             </a>
             <div class="nav-menu">
-                <a href="/html/courses/courses-list.html">Courses</a>
-                <a href="/html/trainers/trainers-list.html">Trainers</a>
-                <a href="/html/students/student-list.html">Students</a>
-                <a href="/html/assignments/briefings-list.html">Briefings</a>
-                <a href="/html/assignments/submissions-list.html">Submissions</a>
+                <a href="../courses/courses-list.html">Courses</a>
+                <a href="../trainers/trainers-list.html">Trainers</a>
+                <a href="../students/student-list.html">Students</a>
+                <a href="briefings-list.html">Briefings</a>
+                <a href="submissions-list.html">Submissions</a>
             </div>
         </div>
     </header>
@@ -70,12 +70,13 @@
                                 placeholder="Select the student(s) that commited the submission"
                                 class="input select-list-input">
                             <datalist id="student-list">
-                                <option value="1 - Student1">Student 1</option>
-                                <option value="2 - Student2">Student 2</option>
-                                <option value="3 - Student3">Student 3</option>
-                                <option value="4 - Student4">Student 4</option>
+                                <option value="1 - Student1"></option>
+                                <option value="2 - Student2"></option>
+                                <option value="3 - Student3"></option>
+                                <option value="4 - Student4"></option>
                             </datalist>
-                            <button type="button" class="select-list-add-button" onclick="add()">Add Student</button>
+                            <button type="button" class="select-list-add-button" onclick="addRow()">Add
+                                Student</button>
                         </div>
 
                         <table>
@@ -89,35 +90,58 @@
                                 <td>1</td>
                                 <td>Leyteris Tzivanis</td>
                                 <td>11-11-1111</td>
-                                <td><button type="button" class="select-list-delete-button"><i
-                                            class="material-icons">delete</i></button></td>
+                                <td>
+                                    <button type="button" onclick="deleteRow(this)" class="select-list-delete-button">
+                                        <i class="material-icons">delete</i></button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>Leyteris Tzivanis</td>
                                 <td>11-11-1111</td>
                                 <td>
-                                    <button type="button" class="select-list-delete-button">
+                                    <button type="button" onclick="deleteRow(this)" class="select-list-delete-button">
                                         <i class="material-icons">delete</i>
                                     </button>
                                 </td>
                             </tr>
                         </table>
-
                     </fieldset>
                 </div>
 
                 <div class="form-buttons">
-                    <input type="submit" value="Add" class="submit-button" onclick="studentSelectAll()" />
-                    <input type="submit" value="Return" class="submit-button" />
+                    <button class="submit-button" id="confirm-btn">Add</button>
+                    <button class="submit-button" id="return-btn">Cancel</button>
                 </div>
             </div>
-
-
         </form>
-
     </main>
     <footer>Tziv Designs. Travel back in time with us!</footer>
+    <script>
+        function addRow() {
+            var selection = document.querySelector(".select-list-input");
+
+            var selectionValue = selection.value;
+            var id = selectionValue.substr(0, selectionValue.indexOf(" "));
+
+            var row = document.createElement("tr");
+            //gemisma row me vasi to id tou pou exo, apo localstorage
+
+            var table = document.querySelector("table");
+            table.appendChild(row);
+        }
+
+        function deleteRow(td) {
+            var rowId = td.parentNode.parentNode.firstElementChild.firstChild.data;
+            var rows = document.querySelectorAll("tr");
+
+            for (var i = 1; i < rows.length; i++) {
+                if (rows[i].firstElementChild.innerHTML == rowId) {
+                    rows[i].remove();
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>

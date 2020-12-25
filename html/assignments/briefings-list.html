@@ -5,24 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Briefings</title>
-    <link href="/css/global.css" rel="stylesheet" />
-    <link href="/css/tables.css" rel="stylesheet" />
-    <link href="/css/header.css" rel="stylesheet" />
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link href="../../css/tables.css" rel="stylesheet" />
+    <link href="../../css/header.css" rel="stylesheet" />
+    <link href="../../css/modal.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="../../js/modal.js"></script>
 </head>
 
 <body>
     <header>
         <div class="nav">
-            <a href="/html/index2.html">
-                <img class="logo" alt="Logo" src="/images/logo.png" width="150">
+            <a href="../index2.html">
+                <img class="logo" alt="Logo" src="../../images/logo.png" width="150">
             </a>
             <div class="nav-menu">
-                <a href="/html/courses/courses-list.html">Courses</a>
-                <a href="/html/trainers/trainers-list.html">Trainers</a>
-                <a href="/html/students/student-list.html">Students</a>
-                <a class="active" href="/html/assignments/briefings-list.html">Briefings</a>
-                <a href="/html/assignments/submissions-list.html">Submissions</a>
+                <a href="../courses/courses-list.html">Courses</a>
+                <a href="../trainers/trainers-list.html">Trainers</a>
+                <a href="../students/student-list.html">Students</a>
+                <a class="active" href="briefings-list.html">Briefings</a>
+                <a href="submissions-list.html">Submissions</a>
             </div>
         </div>
     </header>
@@ -30,7 +32,7 @@
         <h1 class="title">Briefings</h1>
 
         <div class="span-1200">
-            <button class="create-new">Create new</button>
+            <a href="briefing-add.html" class="open-form-btn">Create new</a>
 
             <table>
                 <tr>
@@ -52,14 +54,32 @@
                     <td>12-12-1212 00.00</td>
                     <td>Cb12-Java-Full time</td>
                     <td>No</td>
-                    <td>//todo modal</td>
+                    <td><a href="#" class="modal-btn" onclick="openModal(this)">Click to Read Description</a></td>
+                    <td><button type="button" class="table-button"><i class="material-icons">edit</i></button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Java 2</td>
+                    <td>50</td>
+                    <td>100</td>
+                    <td>12-12-1212 00.00</td>
+                    <td>Cb12-Java-Full time</td>
+                    <td>No</td>
+                    <td><a href="#" class="modal-btn" onclick="openModal(this)">Click to Read Description</a></td>
                     <td><button type="button" class="table-button"><i class="material-icons">edit</i></button></td>
                 </tr>
             </table>
         </div>
 
+        <div class="modal">
+            <div class="modal-content">
+                <span class="modal-close" onclick="closeModal()">&times;</span>
+                <p>Description</p>
+            </div>
+        </div>
     </main>
     <footer>Tziv Designs. Travel back in time with us!</footer>
+
 </body>
 
 </html>

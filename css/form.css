@@ -76,6 +76,23 @@ textarea {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.forms-return-btn {
+  font-weight: bold;
+  font-size: 1rem;
+  width: 300px;
+  display: inline-block;
+  text-align: center;
+  margin: 2rem 0rem;
+  padding: 0.3rem;
+  color: white;
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 /* datetime */
 .datetime-date-input,
 .datetime-time-input {
@@ -199,6 +216,7 @@ textarea {
   font-weight: bold;
   font-size: 0.8rem;
   width: 300px;
+  height: 2rem;
   margin-top: 1rem;
   color: white;
   background-color: green;
