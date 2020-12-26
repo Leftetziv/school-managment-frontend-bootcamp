@@ -9,6 +9,7 @@
     <link href="../../css/form.css" rel="stylesheet" />
     <link href="../../css/header.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="../../js/form-selectiontable-delete-row.js"></script>
 </head>
 
 <body>
@@ -32,6 +33,14 @@
 
         <form action="">
             <div class="grid-container">
+                <div class="span-350-grid-1c">
+                    <label for="briefing">Briefing:</label>
+                    <select type="type" name="briefing" id="briefing">
+                        <option value="" disabled selected>Select the briefing</option>
+                        <option value="1">Java assignment 1 part A</option>
+                        <option value="2">Java final assignment</option>
+                    </select>
+                </div>
 
                 <div class="span-350-grid-1c">
                     <label for="oral_mark">Oral Mark: </label>
@@ -49,16 +58,6 @@
                         <input type="date" name="date" class="datetime-date-input" />
                         <input type="time" name="time" class="datetime-time-input" />
                     </div>
-                </div>
-
-                <div class="span-350-grid-1c">
-                    <label for="briefings">Briefing:</label>
-                    <input list="briefings_list" name="briefings" id="briefings" placeholder="Enter the briefing.." />
-                    <datalist id="briefings_list">
-                        <option value="1 - Java assignment 1 part A">Java assignment 1 part A</option>
-                        <option value="2 - Java final assignment">Java final assignment</option>
-                    </datalist>
-                    </input>
                 </div>
 
                 <div class="span-600-grid-1c">
@@ -110,8 +109,8 @@
                 </div>
 
                 <div class="form-buttons">
-                    <button class="submit-button" id="confirm-btn">Add</button>
-                    <button class="submit-button" id="return-btn">Cancel</button>
+                    <button type="button" class="submit-button" id="confirm-btn">Add</button>
+                    <button type="button" class="submit-button" id="return-btn">Cancel</button>
                 </div>
             </div>
         </form>
@@ -129,17 +128,6 @@
 
             var table = document.querySelector("table");
             table.appendChild(row);
-        }
-
-        function deleteRow(td) {
-            var rowId = td.parentNode.parentNode.firstElementChild.firstChild.data;
-            var rows = document.querySelectorAll("tr");
-
-            for (var i = 1; i < rows.length; i++) {
-                if (rows[i].firstElementChild.innerHTML == rowId) {
-                    rows[i].remove();
-                }
-            }
         }
     </script>
 </body>

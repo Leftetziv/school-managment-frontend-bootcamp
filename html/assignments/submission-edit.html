@@ -9,6 +9,7 @@
     <link href="../../css/form.css" rel="stylesheet" />
     <link href="../../css/header.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="../../js/form-selectiontable-delete-row.js"></script>
 </head>
 
 <body>
@@ -35,6 +36,13 @@
                 <input type="number" name="id" hidden value="12345">
 
                 <div class="span-350-grid-1c">
+                    <label for="briefing">Briefing:</label>
+                    <select type="type" name="briefing" id="briefing" disabled>
+                        <option value="1" selected>Java assignment 1 part A</option>
+                    </select>
+                </div>
+
+                <div class="span-350-grid-1c">
                     <label for="oral_mark">Oral Mark: </label>
                     <input type="number" name="oral_mark" id="oral_mark" placeholder="Enter the oral mark.." />
                 </div>
@@ -52,10 +60,7 @@
                     </div>
                 </div>
 
-                <div class="span-350-grid-1c">
-                    <label>Briefing:</label>
-                    <input type="text" name="briefings" value="1 - Java assignment 1 part A" disabled />
-                </div>
+
 
                 <div class="span-600-grid-1c">
                     <fieldset>
@@ -85,15 +90,15 @@
                                 <td>1</td>
                                 <td>Leyteris Tzivanis</td>
                                 <td>11-11-1111</td>
-                                <td><button type="button" class="select-list-delete-button"><i
-                                            class="material-icons">delete</i></button></td>
+                                <td><button type="button" class="select-list-delete-button" onclick="deleteRow(this)">
+                                        <i class="material-icons">delete</i></button></td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>Leyteris Tzivanis</td>
                                 <td>11-11-1111</td>
                                 <td>
-                                    <button type="button" class="select-list-delete-button">
+                                    <button type="button" class="select-list-delete-button" onclick="deleteRow(this)">
                                         <i class="material-icons">delete</i>
                                     </button>
                                 </td>
@@ -104,14 +109,11 @@
                 </div>
 
                 <div class="form-buttons">
-                    <button class="submit-button" id="confirm-btn">Update</button>
-                    <button class="submit-button" id="return-btn">Cancel</button>
+                    <button type="button" class="submit-button" id="confirm-btn">Update</button>
+                    <button type="button" class="submit-button" id="return-btn">Cancel</button>
                 </div>
             </div>
-
-
         </form>
-
     </main>
     <footer>Tziv Designs. Travel back in time with us!</footer>
 </body>

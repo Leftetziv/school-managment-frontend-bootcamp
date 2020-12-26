@@ -9,6 +9,8 @@
     <link href="../../css/form.css" rel="stylesheet" />
     <link href="../../css/header.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="../../js/form-selectiontable-delete-row.js"></script>
+
 
 </head>
 
@@ -36,15 +38,14 @@
 
                 <div class="span-350-grid-1c">
                     <label for="course">Course:</label>
-                    <input list="courses_list" name="course" id="course" placeholder="Enter the course.." />
-                    <datalist id="courses_list">
-                        <option value="1 - CB12 - Java - Full Time">CB12 - Java - Full Time</option>
-                        <option value="2 - CB12 - Java - Part Time">CB12 - Java - Part Time</option>
-                        <option value="3 - CB12 - Java - Full Time">CB12 - C# - Full Time</option>
-                        <option value="4 - CB12 - C# - Part Time">CB12 - C# - Part Time</option>
-                        <option value="5 - CB13 - Python - Part Time">CB13 - Python - Part Time</option>
-                    </datalist>
-                    </input>
+                    <select type="type" name="course" id="course">
+                        <option value="" disabled selected>Select the course</option>
+                        <option value="1">CB12 - Java - Full Time</option>
+                        <option value="2">CB12 - Java - Part Time</option>
+                        <option value="3">CB12 - C# - Full Time</option>
+                        <option value="4">CB12 - C# - Part Time</option>
+                        <option value="5">CB13 - Python - Part Time</option>
+                    </select>
                 </div>
 
                 <div class="span-600-grid-1c">
@@ -74,15 +75,14 @@
                                 <td>1</td>
                                 <td>Leyteris Tzivanis</td>
                                 <td>11-11-1111</td>
-                                <td><button type="button" class="select-list-delete-button"><i
-                                            class="material-icons">delete</i></button></td>
+                                <td><button type="button" class="select-list-delete-button" onclick="deleteRow(this)">
+                                        <i class="material-icons">delete</i></button></td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>Leyteris Tzivanis</td>
                                 <td>11-11-1111</td>
-                                <td>
-                                    <button type="button" class="select-list-delete-button">
+                                <td><button type="button" class="select-list-delete-button" onclick="deleteRow(this)">
                                         <i class="material-icons">delete</i>
                                     </button>
                                 </td>
@@ -93,8 +93,8 @@
                 </div>
 
                 <div class="form-buttons">
-                    <button class="submit-button" id="confirm-btn">Save</button>
-                    <button class="submit-button" id="return-btn">Cancel</button>
+                    <button type="button" class="submit-button" id="confirm-btn">Save</button>
+                    <button type="button" class="submit-button" id="return-btn">Cancel</button>
                 </div>
 
             </div>

@@ -29,8 +29,8 @@
 }
 
 .logo {
-  width: 9rem;
-  height: 3rem;
+  width: 5rem;
+  /* height: 3rem; */
 }
 
 @media screen and (max-width: 500px) {

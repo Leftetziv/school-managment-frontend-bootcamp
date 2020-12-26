@@ -8,6 +8,8 @@
     <link href="../../css/global.css" rel="stylesheet" />
     <link href="../../css/form.css" rel="stylesheet" />
     <link href="../../css/header.css" rel="stylesheet" />
+    <script src="../../js/gen-restrictions.js"></script>
+    <script src="../../js/courses/course-add-edit-checks.js"></script>
 </head>
 
 <body>
@@ -34,7 +36,9 @@
 
                 <div class="span-350-grid-1c">
                     <label for="mytitle">Title: </label>
-                    <input type="text" name="title" id="title" maxlength="20" placeholder="Enter the course title.." />
+                    <input type="text" name="title" id="title" maxlength="20" placeholder="Enter the course title.."
+                        onchange="checkEmptyInputText(this)" />
+                    <span class="error-msg"></span>
                 </div>
 
                 <div class="span-350-grid-1c">
@@ -59,17 +63,18 @@
 
                 <div class="span-350-grid-1c">
                     <label for="type">Starting Date:</label>
-                    <input type="date" name="type" placeholder="Select the starting date..">
+                    <input type="date" name="type" id="sdate" placeholder="Select the starting date..">
                 </div>
 
                 <div class="span-350-grid-1c">
                     <label for="type">Ending Date:</label>
-                    <input type="date" name="type" placeholder="Select the ending date..">
+                    <input type="date" name="type" id="edate" placeholder="Select the ending date..">
+                    <span class="error-msg"></span>
                 </div>
 
                 <div class="form-buttons">
-                    <button class="submit-button" id="confirm-btn">Add</button>
-                    <button class="submit-button" id="return-btn">Cancel</button>
+                    <button type="button" class="submit-button" id="confirm-btn" onclick="addCourse()">Add</button>
+                    <button type="button" class="submit-button" id="return-btn">Cancel</button>
                 </div>
             </div>
 
@@ -77,6 +82,7 @@
 
     </main>
     <footer>Tziv Designs. Travel back in time with us!</footer>
+
 </body>
 
 </html>

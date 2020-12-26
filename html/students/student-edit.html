@@ -8,6 +8,7 @@
     <link href="../../css/global.css" rel="stylesheet" />
     <link href="../../css/form.css" rel="stylesheet" />
     <link href="../../css/header.css" rel="stylesheet" />
+    <script src="../../js/gen-restrictions.js"></script>
 </head>
 
 <body>
@@ -35,12 +36,14 @@
 
                 <div class="span-350-grid-1c">
                     <label for="fname">First name: </label>
-                    <input type="text" name="fname" id="fname" maxlength="20" placeholder="Student first name.." />
+                    <input type="text" name="fname" id="fname" maxlength="20" placeholder="Student first name.."
+                        onchange="checkEmptyInputText(this)" />
                 </div>
 
                 <div class="span-350-grid-1c">
                     <label for="fname">Last name: </label>
-                    <input type="text" name="lname" id="lname" maxlength="20" placeholder="Student last name.." />
+                    <input type="text" name="lname" id="lname" maxlength="20" placeholder="Student last name.."
+                        onchange="checkEmptyInputText(this)" />
                 </div>
 
                 <div class="span-350-grid-1c">
@@ -55,8 +58,8 @@
                 </div>
 
                 <div class="form-buttons">
-                    <button class="submit-button" id="confirm-btn">Update</button>
-                    <button class="submit-button" id="return-btn">Cancel</button>
+                    <button type="button" class="submit-button" id="confirm-btn">Update</button>
+                    <button type="button" class="submit-button" id="return-btn">Cancel</button>
                 </div>
             </div>
 

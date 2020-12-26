@@ -8,7 +8,7 @@
     <link href="../../css/global.css" rel="stylesheet" />
     <link href="../../css/form.css" rel="stylesheet" />
     <link href="../../css/header.css" rel="stylesheet" />
-
+    <script src="../../js/gen-restrictions.js"></script>
 </head>
 
 <body>
@@ -35,7 +35,9 @@
 
                 <div class="span-350-grid-1c">
                     <label for="title">Title: </label>
-                    <input type="text" name="title" id="title" maxlength="30" placeholder="Briefing title.." />
+                    <input type="text" name="title" id="title" maxlength="30" placeholder="Briefing title.."
+                        onchange="checkEmptyInputText(this)" />
+                    <span class="error-msg"></span>
                 </div>
 
                 <div class="span-350-grid-1c">
@@ -58,16 +60,15 @@
                 </div>
 
                 <div class="span-350-grid-1c">
-                    <label for="courses_list">Course:</label>
-                    <input list="courses_list" name="course" id="course" placeholder="Enter the course.." />
-                    <datalist id="courses_list">
-                        <option value="1 - CB12 - Java - Full Time">CB12 - Java - Full Time</option>
-                        <option value="2 - CB12 - Java - Part Time">CB12 - Java - Part Time</option>
-                        <option value="3 - CB12 - Java - Full Time">CB12 - C# - Full Time</option>
-                        <option value="4 - CB12 - C# - Part Time">CB12 - C# - Part Time</option>
-                        <option value="5 - CB13 - Python - Part Time">CB13 - Python - Part Time</option>
-                    </datalist>
-                    </input>
+                    <label for="course">Course:</label>
+                    <select type="type" name="course" id="course">
+                        <option value="" disabled selected>Select the course</option>
+                        <option value="1">CB12 - Java - Full Time</option>
+                        <option value="2">CB12 - Java - Part Time</option>
+                        <option value="3">CB12 - C# - Full Time</option>
+                        <option value="4">CB12 - C# - Part Time</option>
+                        <option value="5">CB13 - Python - Part Time</option>
+                    </select>
                 </div>
 
                 <div class="span-350-grid-1c">
@@ -81,13 +82,13 @@
 
                 <div class="span-600-grid-1c">
                     <label for="description">Description:</label>
-                    <textarea name="description" id="description" rows="10"
+                    <textarea name="description" id="description" rows="10" maxlength="16777215"
                         placeholder="Enter the description.."></textarea>
                 </div>
 
                 <div class="form-buttons">
-                    <button class="submit-button" id="confirm-btn">Add</button>
-                    <button class="submit-button" id="return-btn">Cancel</button>
+                    <button type="button" class="submit-button" id="confirm-btn">Add</button>
+                    <button type="button" class="submit-button" id="return-btn">Cancel</button>
                 </div>
 
             </div>

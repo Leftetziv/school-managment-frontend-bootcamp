@@ -1,0 +1,31 @@
+course add-edit:
+max chars 20 -> ok (htmlmaxlength="20")
+ending date after starting date -> ok
+title cant be empty -> ok
+
+trainer add-edit:
+max chars 20 -> ok(htmlmaxlength="20")
+first name and last name cant be empty
+
+student add-edit:
+max chars 20-> ok(htmlmaxlength="20")
+tuition fees 0-99999
+first name and last name cant be empty
+
+briefing add-edit:
+title max chars 30 -> ok(htmlmaxlength="30")
+title cant be empty
+max total mark mush be bigger than max oral mark
+textarea max chars 16,777,215 -> ok(htmlmaxlength="16777215")
+
+submission add-edit:
+total mark must be bigger than oral mark
+check if student selections exists based on available options
+total mark mush be less than max total from briefing
+oral mark mush be less than max oral from briefing
+
+students per course:
+check if student selections exists based on available options
+
+trainer per course:
+check if trainer selections exists based on available options

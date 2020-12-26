@@ -8,6 +8,7 @@
     <link href="../../css/global.css" rel="stylesheet" />
     <link href="../../css/form.css" rel="stylesheet" />
     <link href="../../css/header.css" rel="stylesheet" />
+    <script src="../../js/gen-restrictions.js"></script>
 </head>
 
 <body>
@@ -35,7 +36,9 @@
 
                 <div class="span-350-grid-1c">
                     <label for="title">Title: </label>
-                    <input type="text" name="title" id="title" maxlength="30" placeholder="Briefing title.." />
+                    <input type="text" name="title" id="title" maxlength="30" placeholder="Briefing title.."
+                        onchange="checkEmptyInputText(this)" />
+                    <span class="error-msg"></span>
                 </div>
 
                 <div class="span-350-grid-1c">
@@ -58,9 +61,10 @@
                 </div>
 
                 <div class="span-350-grid-1c">
-                    <label>Course:</label>
-                    <input type="text" value="1 - CB12 - Java - Full Time" name="course" disabled
-                        placeholder="Enter the course.." />
+                    <label for="course">Course:</label>
+                    <select type="type" name="course" id="course" disabled>
+                        <option value="3" selected>CB12 - C# - Full Time</option>
+                    </select>
                 </div>
 
                 <div class="span-350-grid-1c">
@@ -74,13 +78,13 @@
 
                 <div class="span-600-grid-1c">
                     <label for="description">Description:</label>
-                    <textarea name="description" id="description" rows="10"
+                    <textarea name="description" id="description" rows="10" maxlength="16777215"
                         placeholder="Enter the description.."></textarea>
                 </div>
 
                 <div class="form-buttons">
-                    <button class="submit-button" id="confirm-btn">Update</button>
-                    <button class="submit-button" id="return-btn">Cancel</button>
+                    <button type="button" class="submit-button" id="confirm-btn">Update</button>
+                    <button type="button" class="submit-button" id="return-btn">Cancel</button>
                 </div>
 
             </div>
