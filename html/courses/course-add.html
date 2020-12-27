@@ -8,8 +8,8 @@
     <link href="../../css/global.css" rel="stylesheet" />
     <link href="../../css/form.css" rel="stylesheet" />
     <link href="../../css/header.css" rel="stylesheet" />
-    <script src="../../js/gen-restrictions.js"></script>
-    <script src="../../js/courses/course-add-edit-checks.js"></script>
+    <script src="../../js/gen-restrictions.js" async></script>
+    <script src="../../js/courses/course-add-edit-checks.js" async></script>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
             <div class="nav-menu">
                 <a href="courses-list.html">Courses</a>
                 <a href="../trainers/trainers-list.html">Trainers</a>
-                <a href="../students/student-list.html">Students</a>
+                <a href="../students/students-list.html">Students</a>
                 <a href="../assignments/briefings-list.html">Briefings</a>
                 <a href="../assignments/submissions-list.html">Submissions</a>
             </div>
@@ -73,8 +73,8 @@
                 </div>
 
                 <div class="form-buttons">
-                    <button type="button" class="submit-button" id="confirm-btn" onclick="addCourse()">Add</button>
-                    <button type="button" class="submit-button" id="return-btn">Cancel</button>
+                    <button type="button" class="submit-button" id="confirm-btn" onclick="commitCourse()">Add</button>
+                    <button type="button" class="submit-button" id="return-btn" onclick="cancel()">Cancel</button>
                 </div>
             </div>
 

@@ -9,7 +9,7 @@
     <link href="../../css/form.css" rel="stylesheet" />
     <link href="../../css/header.css" rel="stylesheet" />
     <script src="../../js/gen-restrictions.js"></script>
-    <script src="../../js/courses/course-add-edit.js"></script>
+    <script src="../../js/courses/course-add-edit-checks.js"></script>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
             <div class="nav-menu">
                 <a href="courses-list.html">Courses</a>
                 <a href="../trainers/trainers-list.html">Trainers</a>
-                <a href="../students/student-list.html">Students</a>
+                <a href="../students/students-list.html">Students</a>
                 <a href="../assignments/briefings-list.html">Briefings</a>
                 <a href="../assignments/submissions-list.html">Submissions</a>
             </div>
@@ -64,17 +64,20 @@
 
                 <div class="span-350-grid-1c">
                     <label for="type">Starting Date:</label>
-                    <input type="date" name="type" placeholder="Select the starting date..">
+                    <input type="date" name="type" id="sdate" placeholder="Select the starting date..">
                 </div>
 
                 <div class="span-350-grid-1c">
                     <label for="type">Ending Date:</label>
-                    <input type="date" name="type" placeholder="Select the ending date..">
+                    <input type="date" name="type" id="edate" placeholder="Select the ending date..">
+                    <span class="error-msg"></span>
+
                 </div>
 
                 <div class="form-buttons">
-                    <button type="button" class="submit-button" id="confirm-btn">Update</button>
-                    <button type="button" class="submit-button" id="return-btn">Cancel</button>
+                    <button type="button" class="submit-button" id="confirm-btn"
+                        onclick="commitCourse()">Update</button>
+                    <button type="button" class="submit-button" id="return-btn" onclick="cancel()">Cancel</button>
                 </div>
             </div>
         </form>

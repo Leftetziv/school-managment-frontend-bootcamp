@@ -10,6 +10,9 @@
     <link href="../../css/header.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="../../js/form-selectiontable-delete-row.js"></script>
+    <script src="../../js/gen-restrictions.js"></script>
+    <script src="../../js/assignments/submission-add-edit-checks.js"></script>
+
 </head>
 
 <body>
@@ -21,7 +24,7 @@
             <div class="nav-menu">
                 <a href="../courses/courses-list.html">Courses</a>
                 <a href="../trainers/trainers-list.html">Trainers</a>
-                <a href="../students/student-list.html">Students</a>
+                <a href="../students/students-list.html">Students</a>
                 <a href="briefings-list.html">Briefings</a>
                 <a href="submissions-list.html">Submissions</a>
             </div>
@@ -50,6 +53,7 @@
                 <div class="span-350-grid-1c">
                     <label for="total_mark">Total Mark: </label>
                     <input type="number" name="total_mark" id="total_mark" placeholder="Enter the total mark.." />
+                    <span class="error-msg"></span>
                 </div>
 
                 <div class="span-350-grid-1c">
@@ -109,8 +113,9 @@
                 </div>
 
                 <div class="form-buttons">
-                    <button type="button" class="submit-button" id="confirm-btn">Add</button>
-                    <button type="button" class="submit-button" id="return-btn">Cancel</button>
+                    <button type="button" class="submit-button" id="confirm-btn"
+                        onclick="commitSubmission()">Add</button>
+                    <button type="button" class="submit-button" id="return-btn" onclick="cancel()">Cancel</button>
                 </div>
             </div>
         </form>

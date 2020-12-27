@@ -10,8 +10,7 @@
     <link href="../../css/header.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="../../js/form-selectiontable-delete-row.js"></script>
-
-
+    <script src="../../js/students/student-add-edit-checks.js"></script>
 </head>
 
 <body>
@@ -23,7 +22,7 @@
             <div class="nav-menu">
                 <a href="../courses/courses-list.html">Courses</a>
                 <a href="../trainers/trainers-list.html">Trainers</a>
-                <a href="student-list.html">Students</a>
+                <a href="students-list.html">Students</a>
                 <a href="../assignments/briefings-list.html">Briefings</a>
                 <a href="../assignments/submissions-list.html">Submissions</a>
             </div>
@@ -94,7 +93,8 @@
 
                 <div class="form-buttons">
                     <button type="button" class="submit-button" id="confirm-btn">Save</button>
-                    <button type="button" class="submit-button" id="return-btn">Cancel</button>
+                    <button type="button" class="submit-button" id="return-btn"
+                        onclick="cancelToCourse()">Cancel</button>
                 </div>
 
             </div>

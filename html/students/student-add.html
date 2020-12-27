@@ -9,6 +9,7 @@
     <link href="../../css/form.css" rel="stylesheet" />
     <link href="../../css/header.css" rel="stylesheet" />
     <script src="../../js/gen-restrictions.js"></script>
+    <script src="../../js/students/student-add-edit-checks.js"></script>
 </head>
 
 <body>
@@ -20,7 +21,7 @@
             <div class="nav-menu">
                 <a href="../courses/courses-list.html">Courses</a>
                 <a href="../trainers/trainers-list.html">Trainers</a>
-                <a href="student-list.html">Students</a>
+                <a href="students-list.html">Students</a>
                 <a href="../assignments/briefings-list.html">Briefings</a>
                 <a href="../assignments/submissions-list.html">Submissions</a>
             </div>
@@ -56,11 +57,12 @@
                     <label for="type">Tuition Fees:</label>
                     <input type="number" name="tuition" id="tuition" placeholder="Enter the tuition fees.." min="0"
                         max="99999" step="0.01" />
+                    <span class="error-msg"></span>
                 </div>
 
                 <div class="form-buttons">
-                    <button type="button" class="submit-button" id="confirm-btn">Add</button>
-                    <button type="button" class="submit-button" id="return-btn">Cancel</button>
+                    <button type="button" class="submit-button" id="confirm-btn" onclick="commitStudent()">Add</button>
+                    <button type="button" class="submit-button" id="return-btn" onclick="cancel()">Cancel</button>
                 </div>
             </div>
 

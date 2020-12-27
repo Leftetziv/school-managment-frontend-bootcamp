@@ -1,11 +1,16 @@
-function addCourse() {
+function courseCheck() {
+    var isOk = true;
     var title = document.querySelector("#title");
     titleIsEmpty = isEmpty(title);
 
     // empty title check
     if (titleIsEmpty) {
         let error = title.nextElementSibling;
-        error.innerHTML = "Can not be empty"
+        error.innerHTML = "Can not be empty";
+        isOk = false;
+    } else {
+        let error = title.nextElementSibling;
+        error.innerHTML = "";
     }
 
     // starting date before ending date check
@@ -15,10 +20,21 @@ function addCourse() {
     if (Date.parse(edate.value) < Date.parse(sdate.value)) {
         let error = edate.nextElementSibling;
         error.innerHTML = "Ending date must be after starting date";
+        isOk = false;
     } else {
         let error = edate.nextElementSibling;
         error.innerHTML = "";
     }
+
+    return isOk;
 }
 
+function commitCourse() {
+    if (courseCheck()) {
+        //add/update course
+    }
+}
 
+function cancel() {
+    window.open("courses-list.html", "_self");
+}

@@ -9,6 +9,7 @@
     <link href="../../css/form.css" rel="stylesheet" />
     <link href="../../css/header.css" rel="stylesheet" />
     <script src="../../js/gen-restrictions.js"></script>
+    <script src="../../js/assignments/briefing-add-edit-check.js"></script>
 </head>
 
 <body>
@@ -20,7 +21,7 @@
             <div class="nav-menu">
                 <a href="../courses/courses-list.html">Courses</a>
                 <a href="../trainers/trainers-list.html">Trainers</a>
-                <a href="../students/student-list.html">Students</a>
+                <a href="../students/students-list.html">Students</a>
                 <a href="briefings-list.html">Briefings</a>
                 <a href="submissions-list.html">Submissions</a>
             </div>
@@ -49,6 +50,7 @@
                     <label for="total_mark">Max Total Mark: </label>
                     <input type="number" name="max_total_mark" id="total_mark"
                         placeholder="Enter the max total mark.." />
+                    <span class="error-msg"></span>
                 </div>
 
                 <div class="span-350-grid-1c">
@@ -87,13 +89,11 @@
                 </div>
 
                 <div class="form-buttons">
-                    <button type="button" class="submit-button" id="confirm-btn">Add</button>
-                    <button type="button" class="submit-button" id="return-btn">Cancel</button>
+                    <button type="button" class="submit-button" id="confirm-btn" onclick="commitBriefing()">Add</button>
+                    <button type="button" class="submit-button" id="return-btn" onclick="cancel()">Cancel</button>
                 </div>
-
             </div>
         </form>
-
     </main>
     <footer>Tziv Designs. Travel back in time with us!</footer>
 </body>
