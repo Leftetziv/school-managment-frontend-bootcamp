@@ -47,3 +47,19 @@ function getTypes() {
 function getStudents() {
     return JSON.parse(localStorage.getItem('students'));
 }
+
+function getTrainers() {
+    return JSON.parse(localStorage.getItem('trainers'));
+}
+
+function getSubjects() {
+    return JSON.parse(localStorage.getItem('subjects'));
+}
+
+function getBriefings() {
+    return JSON.parse(localStorage.getItem('briefings'));
+}
+
+function getSubmissions() {
+    return JSON.parse(localStorage.getItem('submissions'));
+}

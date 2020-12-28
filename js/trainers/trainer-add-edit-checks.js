@@ -27,16 +27,6 @@ function trainerCheck() {
     return isOk;
 }
 
-function commitTrainer() {
-    if (trainerCheck()) {
-        //add/update trainer
-    }
-}
-
-function cancel() {
-    window.open("trainers-list.html", "_self");
-}
-
-function cancelToCourse() {
+function cancelToCourse() { //tha metaferthei sto js pou tha xrisimopoiei to trainers per course
     window.open("../courses/courses-list.html", "_self");
 }

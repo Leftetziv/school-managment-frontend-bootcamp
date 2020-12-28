@@ -1,10 +1,6 @@
 function initialize() {
     let streams = [
         {
-            "id": 0,
-            "stream": "TBD"
-        },
-        {
             "id": 1,
             "stream": "Java"
         },
@@ -17,10 +13,6 @@ function initialize() {
 
 
     let types = [
-        {
-            "id": 0,
-            "type": "TBD"
-        },
         {
             "id": 1,
             "type": "Full time"

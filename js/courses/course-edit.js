@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // stream
     var streamInput = document.getElementById("stream");
-    for (var i = 1; i < streams.length; i++) {
+    for (var i = 0; i < streams.length; i++) {
         let option = document.createElement("option");
         option.value = streams[i]["id"];
         option.text = streams[i]["stream"];
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // type
     var typeInput = document.getElementById("type");
-    for (var i = 1; i < types.length; i++) {
+    for (var i = 0; i < types.length; i++) {
         let option = document.createElement("option");
         option.value = types[i]["id"];
         option.text = types[i]["type"];
