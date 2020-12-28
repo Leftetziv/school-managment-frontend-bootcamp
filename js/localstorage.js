@@ -33,16 +33,17 @@ function setSubmissions(object) {
 
 
 function getCourses() {
-    // console.log(JSON.parse(localStorage.getItem('courses')));
     return JSON.parse(localStorage.getItem('courses'));
 }
 
 function getStreams() {
-    // console.log(JSON.parse(localStorage.getItem('courses')));
     return JSON.parse(localStorage.getItem('streams'));
 }
 
 function getTypes() {
-    // console.log(JSON.parse(localStorage.getItem('courses')));
     return JSON.parse(localStorage.getItem('types'));
+}
+
+function getStudents() {
+    return JSON.parse(localStorage.getItem('students'));
 }

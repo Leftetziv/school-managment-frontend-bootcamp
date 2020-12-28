@@ -38,17 +38,6 @@ function studentCheck() {
     return isOk;
 }
 
-function commitStudent() {
-    if (studentCheck()) {
-        //add/update student
-    }
-}
-
-function cancel() {
-    window.open("students-list.html", "_self");
-}
-
-function cancelToCourse() {
+function cancelToCourse() {     //tha metaferthei sto js pou tha xrisimopoiei to students per course
     window.open("../courses/courses-list.html", "_self");
 }
-

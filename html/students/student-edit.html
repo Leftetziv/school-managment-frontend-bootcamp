@@ -9,6 +9,7 @@
     <link href="../../css/form.css" rel="stylesheet" />
     <link href="../../css/header.css" rel="stylesheet" />
     <script src="../../js/gen-restrictions.js"></script>
+    <script src="../../js/localstorage.js"></script>
     <script src="../../js/students/student-add-edit-checks.js"></script>
 </head>
 
@@ -31,27 +32,25 @@
         <h2 class="title">Modify Student
         </h2>
 
-        <form action="">
+        <form name="form" action="">
             <div class="grid-container">
-                <input type="number" name="id" hidden value="12345">
+                <input type="number" name="id" id="id" hidden value="12345">
 
                 <div class="span-350-grid-1c">
                     <label for="fname">First name: </label>
-                    <input type="text" name="fname" id="fname" maxlength="20" placeholder="Student first name.."
-                        onchange="checkEmptyInputText(this)" />
+                    <input type="text" name="fname" id="fname" maxlength="20" placeholder="Student first name.." />
                     <span class="error-msg"></span>
                 </div>
 
                 <div class="span-350-grid-1c">
                     <label for="fname">Last name: </label>
-                    <input type="text" name="lname" id="lname" maxlength="20" placeholder="Student last name.."
-                        onchange="checkEmptyInputText(this)" />
+                    <input type="text" name="lname" id="lname" maxlength="20" placeholder="Student last name.." />
                     <span class="error-msg"></span>
                 </div>
 
                 <div class="span-350-grid-1c">
                     <label for="type">Date of Birth:</label>
-                    <input type="date" name="dob" placeholder="Enter the date of birth..">
+                    <input type="date" name="dob" id="dob" placeholder="Enter the date of birth..">
                 </div>
 
                 <div class="span-350-grid-1c">
@@ -73,6 +72,7 @@
 
     </main>
     <footer>Tziv Designs. Travel back in time with us!</footer>
+    <script src="../../js/students/student-edit.js"></script>
 </body>
 
 </html>
