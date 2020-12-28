@@ -5,24 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link href="/css/global.css" rel="stylesheet" />
-    <link href="/css/form.css" rel="stylesheet" />
+    <link href="../css/global.css" rel="stylesheet" />
+    <link href="../css/tables.css" rel="stylesheet" />
+    <link href="../css/form.css" rel="stylesheet" />
+    <link href="../css/header.css" rel="stylesheet" />
+    <script src="../js/localstorage.js" async></script>
+    <script src="../js/initialization.js" async></script>
 </head>
 
 <body>
 
     <header>
-        <div class="grid-container">
-            <a href="/index.html">
-                <img alt="Logo-image" src="/images/logo.png" width="200">
+        <div class="nav">
+            <a href="../index2.html">
+                <img class="logo" alt="Logo" src="../../images/logo.png" width="150">
             </a>
-            //todo menu
-            <a href="/html/">
-                Live Server
-            </a>
+            <div class="nav-menu">
+                <a href="courses/courses-list.html">Courses</a>
+                <a href="trainers/trainers-list.html">Trainers</a>
+                <a href="students/students-list.html">Students</a>
+                <a href="assignments/briefings-list.html">Briefings</a>
+                <a href="assignments/submissions-list.html">Submissions</a>
+            </div>
         </div>
     </header>
     <main>
+        <div class="grid-container">
+            <button type="button" class="submit-button" onclick="initialize()">initialization</button>
+        </div>
+        <div class="grid-container">
+            <!-- <button type="button" onclick="getCourses()">get courses test</button> -->
+        </div>
+
     </main>
     <footer>Copyright 1999</footer>
 </body>

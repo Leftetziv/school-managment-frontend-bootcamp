@@ -31,44 +31,35 @@
         <h2 class="title">Creating Course
         </h2>
 
-        <form action="">
+        <form name="form" action="">
             <div class="grid-container">
 
                 <div class="span-350-grid-1c">
                     <label for="mytitle">Title: </label>
-                    <input type="text" name="title" id="title" maxlength="20" placeholder="Enter the course title.."
-                        onchange="checkEmptyInputText(this)" />
+                    <input type="text" name="title" id="title" maxlength="20" placeholder="Enter the course title..">
                     <span class="error-msg"></span>
                 </div>
 
                 <div class="span-350-grid-1c">
                     <label for="stream">Stream:</label>
                     <select name="stream" id="stream">
-                        <option value="" disabled selected>Select a stream</option>
-                        <option value="java">Java</option>
-                        <option value="csharp">C#</option>
-                        <option value="js">Javascript</option>
-                        <option value="python">Python</option>
                     </select>
                 </div>
 
                 <div class="span-350-grid-1c">
                     <label for="type">Type:</label>
                     <select name="type" id="type">
-                        <option value="" disabled selected>Select a type</option>
-                        <option value="full">Full time</option>
-                        <option value="part">Part time</option>
                     </select>
                 </div>
 
                 <div class="span-350-grid-1c">
-                    <label for="type">Starting Date:</label>
-                    <input type="date" name="type" id="sdate" placeholder="Select the starting date..">
+                    <label for="sdate">Starting Date:</label>
+                    <input type="date" name="sdate" id="sdate" placeholder="Select the starting date..">
                 </div>
 
                 <div class="span-350-grid-1c">
-                    <label for="type">Ending Date:</label>
-                    <input type="date" name="type" id="edate" placeholder="Select the ending date..">
+                    <label for="edate">Ending Date:</label>
+                    <input type="date" name="edate" id="edate" placeholder="Select the ending date..">
                     <span class="error-msg"></span>
                 </div>
 
@@ -82,7 +73,8 @@
 
     </main>
     <footer>Tziv Designs. Travel back in time with us!</footer>
-
+    <script src="../../js/localstorage.js"></script>
+    <script src="../../js/courses/course-add.js"></script>
 </body>
 
 </html>

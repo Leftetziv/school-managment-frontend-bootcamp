@@ -7,7 +7,7 @@ function isEmpty(input2) {
     }
 }
 
-function checkEmptyInputText(input) {
+function checkEmptyInputText(input) { //will be not used at the end
     if (isEmpty(input)) {
         input.nextElementSibling.innerHTML = "Can not be empty";
     } else {

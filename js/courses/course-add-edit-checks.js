@@ -28,13 +28,3 @@ function courseCheck() {
 
     return isOk;
 }
-
-function commitCourse() {
-    if (courseCheck()) {
-        //add/update course
-    }
-}
-
-function cancel() {
-    window.open("courses-list.html", "_self");
-}
