@@ -12,10 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // streamInput.add(typeStream);
 
     for (var i = 0; i < streams.length; i++) {
-        let typeStream = document.createElement("option");
-        typeStream.value = streams[i]["id"];
-        typeStream.text = streams[i]["stream"];
-        streamInput.add(typeStream);
+        let streamOption = document.createElement("option");
+        streamOption.value = streams[i]["id"];
+        streamOption.text = streams[i]["stream"];
+        streamInput.add(streamOption);
     }
 
     // type

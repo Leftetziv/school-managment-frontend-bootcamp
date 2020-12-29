@@ -6,8 +6,11 @@ window.onclick = function (event) {
 }
 
 function openModal(td) {
+    var briefings = getBriefings();
     var id = td.parentNode.parentNode.firstElementChild.firstChild.data;
-    document.querySelector(".modal-content p").innerHTML = id;
+
+    document.querySelector(".modal-content p").innerHTML = briefings.find(b => b.id == id)["description"];
+    
     var modal = document.querySelector(".modal");
     modal.style.display = "block";
 }

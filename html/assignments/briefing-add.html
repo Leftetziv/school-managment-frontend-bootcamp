@@ -10,6 +10,8 @@
     <link href="../../css/header.css" rel="stylesheet" />
     <script src="../../js/gen-restrictions.js"></script>
     <script src="../../js/assignments/briefings/briefing-add-edit-check.js"></script>
+    <script src="../../js/localstorage.js"></script>
+    <script src="../../js/assignments/briefings/briefing-add.js"></script>
 </head>
 
 <body>
@@ -31,7 +33,7 @@
         <h2 class="title">Creating Briefing
         </h2>
 
-        <form action="">
+        <form name="form" action="">
             <div class="grid-container">
 
                 <div class="span-350-grid-1c">
@@ -64,20 +66,17 @@
                 <div class="span-350-grid-1c">
                     <label for="course">Course:</label>
                     <select type="type" name="course" id="course">
-                        <option value="" disabled selected>Select the course</option>
-                        <option value="1">CB12 - Java - Full Time</option>
-                        <option value="2">CB12 - Java - Part Time</option>
-                        <option value="3">CB12 - C# - Full Time</option>
-                        <option value="4">CB12 - C# - Part Time</option>
-                        <option value="5">CB13 - Python - Part Time</option>
+                        <!-- <option value="" disabled selected>Select the course</option> -->
                     </select>
                 </div>
 
                 <div class="span-350-grid-1c">
-                    <div><input type="radio" name="isproject" id="individual" value="1" checked>
+                    <div>
+                        <input type="radio" name="isproject" id="individual" value="1" checked>
                         <label for="individual">Individual project</label>
                     </div>
-                    <div><input type="radio" name="isproject" id="group" value="0">
+                    <div>
+                        <input type="radio" name="isproject" id="group" value="0">
                         <label for="group">Group project</label>
                     </div>
                 </div>

@@ -28,13 +28,3 @@ function briefingCheck() {
 
     return isOk;
 }
-
-function commitBriefing() {
-    if (briefingCheck()) {
-        //add/update briefing
-    }
-}
-
-function cancel() {
-    window.open("briefings-list.html", "_self");
-}

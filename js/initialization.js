@@ -151,7 +151,7 @@ function initialize() {
             "title": "briefing 1",
             "maxoral": 50,
             "maxtotal": 100,
-            "ddate": new Date('2020-01-01'),
+            "ddate": new Date(2020, 01, 10, 0, 0),
             "course": 1,
             "isproject": false,
             "description": "fou"
@@ -161,7 +161,7 @@ function initialize() {
             "title": "briefing 2",
             "maxoral": 50,
             "maxtotal": 100,
-            "ddate": new Date('2020-02-01'),
+            "ddate": new Date(2020, 11, 10, 15, 10),
             "course": 1,
             "isproject": false,
             "description": "fou fou"
@@ -171,7 +171,7 @@ function initialize() {
             "title": "briefing 3",
             "maxoral": 50,
             "maxtotal": 100,
-            "ddate": new Date('2020-03-01'),
+            "ddate": new Date(2020, 03, 10, 0, 20),
             "course": 2,
             "isproject": true,
             "description": "fou fou fou"
@@ -181,7 +181,7 @@ function initialize() {
             "title": "briefing 4",
             "maxoral": 50,
             "maxtotal": 100,
-            "ddate": new Date('2020-04-01'),
+            "ddate": new Date(2021, 04, 10, 0, 30),
             "course": 3,
             "isproject": true,
             "description": "fou fou fou fou"

@@ -10,6 +10,8 @@
     <link href="../../css/header.css" rel="stylesheet" />
     <script src="../../js/gen-restrictions.js"></script>
     <script src="../../js/assignments/briefings/briefing-add-edit-check.js"></script>
+    <script src="../../js/localstorage.js"></script>
+    <script src="../../js/assignments/briefings/briefing-edit.js"></script>
 </head>
 
 <body>
@@ -31,14 +33,13 @@
         <h2 class="title">Modify Briefing
         </h2>
 
-        <form action="">
+        <form name="form" action="">
             <div class="grid-container">
-                <input type="number" name="id" hidden value="12345">
+                <input type="number" name="id" id="id" hidden value="12345">
 
                 <div class="span-350-grid-1c">
                     <label for="title">Title: </label>
-                    <input type="text" name="title" id="title" maxlength="30" placeholder="Briefing title.."
-                        onchange="checkEmptyInputText(this)" />
+                    <input type="text" name="title" id="title" maxlength="30" placeholder="Briefing title.." />
                     <span class="error-msg"></span>
                 </div>
 
@@ -57,23 +58,22 @@
                 <div class="span-350-grid-1c">
                     <label>Submission due date and time:</label>
                     <div class="datetime">
-                        <input type="date" name="date" class="datetime-date-input" />
-                        <input type="time" name="time" class="datetime-time-input" />
+                        <input type="date" name="date" id="date" class="datetime-date-input" />
+                        <input type="time" name="time" id="time" class="datetime-time-input" />
                     </div>
                 </div>
 
                 <div class="span-350-grid-1c">
                     <label for="course">Course:</label>
                     <select type="type" name="course" id="course" disabled>
-                        <option value="3" selected>CB12 - C# - Full Time</option>
                     </select>
                 </div>
 
                 <div class="span-350-grid-1c">
-                    <div><input type="radio" name="isproject" value="1" checked disabled>
+                    <div><input type="radio" id="ind" disabled>
                         <label for="individual">Individual project</label>
                     </div>
-                    <div><input type="radio" name="isproject" value="0" disabled>
+                    <div><input type="radio" id="grp" disabled>
                         <label for="group">Group project</label>
                     </div>
                 </div>
