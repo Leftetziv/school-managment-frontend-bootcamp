@@ -25,8 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         cell = row.insertCell(4);
         let ddate = new Date(briefings[i - 1]["ddate"]);
-        let offset = ddate.getTimezoneOffset() * 60000;
-        ddate.setTime(ddate.getTime() - offset);
+        ddate.setTime(ddate.getTime() - (ddate.getTimezoneOffset() * 60000));
         cell.innerHTML = ddate.toISOString().slice(0, 16).replace('T', ' ');
 
         cell = row.insertCell(5);

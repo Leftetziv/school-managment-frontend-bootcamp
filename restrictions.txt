@@ -19,10 +19,11 @@ max total mark must be bigger than max oral mark -> ok
 textarea max chars 16,777,215 -> ok
 
 submission add-edit:
+check if new submission have a briefing selected -> ok
 total mark must be bigger than oral mark -> ok
-check if student selections exists based on available options
-total mark mush be less than max total from briefing
-oral mark mush be less than max oral from briefing
+check if student selections exists based on available options -> ok
+total mark must be less than max total from briefing -> ok
+oral mark must be less than max oral from briefing -> ok
 
 students per course:
 check if student selections exists based on available options

@@ -22,8 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // due date
     var dateInput = document.getElementById("date");
     let date = new Date(briefing["ddate"]);
-    let offset = date.getTimezoneOffset() * 60000;
-    date.setTime(date.getTime() - offset);
+    date.setTime(date.getTime() - (date.getTimezoneOffset() * 60000));
     dateInput.value = date.toISOString().slice(0, 10);
 
     // due time

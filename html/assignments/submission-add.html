@@ -12,6 +12,8 @@
     <script src="../../js/form-selectiontable-delete-row.js"></script>
     <script src="../../js/gen-restrictions.js"></script>
     <script src="../../js/assignments/submissions/submission-add-edit-checks.js"></script>
+    <script src="../../js/localstorage.js"></script>
+    <script src="../../js/assignments/submissions/submission-add.js"></script>
 </head>
 
 <body>
@@ -33,33 +35,33 @@
         <h2 class="title">Creating Submission
         </h2>
 
-        <form action="">
+        <form name="form" action="">
             <div class="grid-container">
                 <div class="span-350-grid-1c">
                     <label for="briefing">Briefing:</label>
-                    <select type="type" name="briefing" id="briefing">
+                    <select type="type" name="briefing" id="briefing" onchange="updatestudentSelections()">
                         <option value="" disabled selected>Select the briefing</option>
-                        <option value="1">Java assignment 1 part A</option>
-                        <option value="2">Java final assignment</option>
                     </select>
+                    <span class="error-msg" id="briefing-error"></span>
                 </div>
 
                 <div class="span-350-grid-1c">
                     <label for="oral_mark">Oral Mark: </label>
                     <input type="number" name="oral_mark" id="oral_mark" placeholder="Enter the oral mark.." />
+                    <span class="error-msg" id="oral_error"></span>
                 </div>
 
                 <div class="span-350-grid-1c">
                     <label for="total_mark">Total Mark: </label>
                     <input type="number" name="total_mark" id="total_mark" placeholder="Enter the total mark.." />
-                    <span class="error-msg"></span>
+                    <span class="error-msg" id="total_error"></span>
                 </div>
 
                 <div class="span-350-grid-1c">
                     <label>Submission date and time:</label>
                     <div class="datetime">
-                        <input type="date" name="date" class="datetime-date-input" />
-                        <input type="time" name="time" class="datetime-time-input" />
+                        <input type="date" name="date" id="date" class="datetime-date-input" />
+                        <input type="time" name="time" id="time" class="datetime-time-input" />
                     </div>
                 </div>
 
@@ -72,40 +74,18 @@
                                 placeholder="Select the student(s) that commited the submission"
                                 class="input select-list-input">
                             <datalist id="student-list">
-                                <option value="1 - Student1"></option>
-                                <option value="2 - Student2"></option>
-                                <option value="3 - Student3"></option>
-                                <option value="4 - Student4"></option>
                             </datalist>
-                            <button type="button" class="select-list-add-button" onclick="addRow()">Add
-                                Student</button>
+                            <button type="button" class="select-list-add-button" onclick="add()">Add Student</button>
                         </div>
-
+                        <div class="span-350-grid-1c">
+                            <span class="error-msg" id="add-error"></span>
+                        </div>
                         <table>
                             <tr>
                                 <th>Id</th>
                                 <th>Name</th>
                                 <th>Date of birth</th>
                                 <th></th>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Leyteris Tzivanis</td>
-                                <td>11-11-1111</td>
-                                <td>
-                                    <button type="button" onclick="deleteRow(this)" class="select-list-delete-button">
-                                        <i class="material-icons">delete</i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Leyteris Tzivanis</td>
-                                <td>11-11-1111</td>
-                                <td>
-                                    <button type="button" onclick="deleteRow(this)" class="select-list-delete-button">
-                                        <i class="material-icons">delete</i>
-                                    </button>
-                                </td>
                             </tr>
                         </table>
                     </fieldset>
@@ -120,20 +100,6 @@
         </form>
     </main>
     <footer>Tziv Designs. Travel back in time with us!</footer>
-    <script>
-        function addRow() {
-            var selection = document.querySelector(".select-list-input");
-
-            var selectionValue = selection.value;
-            var id = selectionValue.substr(0, selectionValue.indexOf(" "));
-
-            var row = document.createElement("tr");
-            //gemisma row me vasi to id tou pou exo, apo localstorage
-
-            var table = document.querySelector("table");
-            table.appendChild(row);
-        }
-    </script>
 </body>
 
 </html>

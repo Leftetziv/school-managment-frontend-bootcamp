@@ -193,34 +193,90 @@ function initialize() {
     let submissions = [
         {
             "id": 1,
-            "maxoral": 40,
-            "maxtotal": 80,
+            "oral": 40,
+            "total": 80,
             "sdate": new Date('2020-01-01'),
             "briefing": 1
         },
         {
             "id": 2,
-            "maxoral": 41,
-            "maxtotal": 81,
+            "oral": 41,
+            "total": 81,
             "sdate": new Date('2020-01-02'),
             "briefing": 2
         },
         {
             "id": 3,
-            "maxoral": 42,
-            "maxtotal": 82,
+            "oral": 42,
+            "total": 82,
             "sdate": new Date('2020-01-03'),
             "briefing": 3
         },
         {
             "id": 4,
-            "maxoral": 43,
-            "maxtotal": 83,
+            "oral": 43,
+            "total": 83,
             "sdate": new Date('2020-01-04'),
             "briefing": 4
         }
     ];
     setSubmissions(submissions);
+
+    let submissionsPerStudent = [
+        {
+            "subid": 1,
+            "studid": 1
+        },
+        {
+            "subid": 1,
+            "studid": 2
+        },
+        {
+            "subid": 2,
+            "studid": 3
+        },
+        {
+            "subid": 2,
+            "studid": 4
+        },
+        {
+            "subid": 3,
+            "studid": 1
+        },
+        {
+            "subid": 4,
+            "studid": 2
+        }
+    ];
+    setSubmissionsPerStudent(submissionsPerStudent);
+
+    let studentsPerCourse = [
+        {
+            "cid": 1,
+            "studid": 1
+        },
+        {
+            "cid": 1,
+            "studid": 2
+        },
+        {
+            "cid": 1,
+            "studid": 3
+        },
+        {
+            "cid": 1,
+            "studid": 4
+        },
+        {
+            "cid": 2,
+            "studid": 1
+        },
+        {
+            "cid": 3,
+            "studid": 2
+        }
+    ];
+    setStudentsPerCourse(studentsPerCourse);
 
 }
 

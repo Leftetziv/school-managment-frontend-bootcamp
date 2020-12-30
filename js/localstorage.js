@@ -31,6 +31,14 @@ function setSubmissions(object) {
 }
 
 
+function setSubmissionsPerStudent(object) {
+    localStorage.setItem("submissionsPerStudent", JSON.stringify(object));
+}
+
+function setStudentsPerCourse(object) {
+    localStorage.setItem("studentsPerCourse", JSON.stringify(object));
+}
+
 
 function getCourses() {
     return JSON.parse(localStorage.getItem('courses'));
@@ -62,4 +70,13 @@ function getBriefings() {
 
 function getSubmissions() {
     return JSON.parse(localStorage.getItem('submissions'));
+}
+
+function getSubmissionsPerStudent() {
+    return JSON.parse(localStorage.getItem('submissionsPerStudent'));
+}
+
+
+function getStudentsPerCourse() {
+    return JSON.parse(localStorage.getItem('studentsPerCourse'));
 }
