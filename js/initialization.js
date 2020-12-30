@@ -203,78 +203,115 @@ function initialize() {
             "oral": 41,
             "total": 81,
             "sdate": new Date('2020-01-02'),
-            "briefing": 2
+            "briefing": 1
         },
         {
             "id": 3,
             "oral": 42,
             "total": 82,
             "sdate": new Date('2020-01-03'),
-            "briefing": 3
+            "briefing": 2
         },
         {
             "id": 4,
             "oral": 43,
             "total": 83,
             "sdate": new Date('2020-01-04'),
-            "briefing": 4
+            "briefing": 3
         }
     ];
     setSubmissions(submissions);
 
     let submissionsPerStudent = [
+        // {
+        //     "subid": 1,
+        //     "studid": 1
+        // },
+        // {
+        //     "subid": 1,
+        //     "studid": 2
+        // },
+        // {
+        //     "subid": 2,
+        //     "studid": 3
+        // },
+        // {
+        //     "subid": 2,
+        //     "studid": 4
+        // },
+        // {
+        //     "subid": 3,
+        //     "studid": 1
+        // },
+        // {
+        //     "subid": 4,
+        //     "studid": 2
+        // }
+
         {
             "subid": 1,
-            "studid": 1
-        },
-        {
-            "subid": 1,
-            "studid": 2
+            "studentsId": [1, 2]
         },
         {
             "subid": 2,
-            "studid": 3
-        },
-        {
-            "subid": 2,
-            "studid": 4
+            "studentsId": [3, 4]
         },
         {
             "subid": 3,
-            "studid": 1
+            "studentsId": [1]
         },
         {
             "subid": 4,
-            "studid": 2
+            "studentsId": [2]
         }
+
+
     ];
     setSubmissionsPerStudent(submissionsPerStudent);
 
     let studentsPerCourse = [
+        // {
+        //     "cid": 1,
+        //     "studid": 1
+        // },
+        // {
+        //     "cid": 1,
+        //     "studid": 2
+        // },
+        // {
+        //     "cid": 1,
+        //     "studid": 3
+        // },
+        // {
+        //     "cid": 1,
+        //     "studid": 4
+        // },
+        // {
+        //     "cid": 2,
+        //     "studid": 1
+        // },
+        // {
+        //     "cid": 3,
+        //     "studid": 2
+        // }
         {
             "cid": 1,
-            "studid": 1
-        },
-        {
-            "cid": 1,
-            "studid": 2
-        },
-        {
-            "cid": 1,
-            "studid": 3
-        },
-        {
-            "cid": 1,
-            "studid": 4
+            "stud": [1, 2, 3, 4]
         },
         {
             "cid": 2,
-            "studid": 1
+            "stud": [1, 2, 3, 4]
         },
         {
             "cid": 3,
-            "studid": 2
+            "stud": [1, 3]
+        },
+        {
+            "cid": 4,
+            "stud": [2, 4]
         }
+
+
     ];
     setStudentsPerCourse(studentsPerCourse);
 

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // briefings
     var briefings = getBriefings();
     var briefingInput = document.getElementById("briefing");
 
@@ -26,11 +27,10 @@ function updatestudentSelections() {
     var briefingId = briefingInput.value;
     var courseId = courses.find(c => c.id == briefingId)["id"];
 
-    var studentIds = new Array();
-    studentIds = studentsPerCourse.filter(tuple => tuple.cid == courseId);
+    let courseStudentsIds = studentsPerCourse.find(s => s.cid == courseId)["stud"];
 
-    for (let i = 0; i < studentIds.length; i++) {
-        let student = students.find(s => s.id == studentIds[i]["studid"]);
+    for (let i = 0; i < courseStudentsIds.length; i++) {
+        let student = students.find(s => s.id == courseStudentsIds[i]);
         let option = document.createElement("option");
         option.value = student["id"] + " " + student["fname"] + " " + student["lname"];
         studentsInput.append(option);
@@ -51,9 +51,9 @@ function add() {
     let cell;
 
     let alreadySubmitted = new Array();
-    let ddd = document.getElementsByClassName("id-td");
-    for (let i = 0; i < ddd.length; i++) {
-        alreadySubmitted.push(parseInt(ddd[i].innerHTML));
+    let tableIds = document.getElementsByClassName("id-td");
+    for (let i = 0; i < tableIds.length; i++) {
+        alreadySubmitted.push(parseInt(tableIds[i].innerHTML));
     }
 
     if (student == undefined) {
@@ -82,8 +82,9 @@ function add() {
 
 function commitSubmission() {
     if (SubmissionCheck()) {
-        var submissions = getSubmissions();
-        var submission = new Object();
+        // set submission
+        let submissions = getSubmissions();
+        let submission = new Object();
 
         submission["id"] = submissions.length + 1;
         submission["briefing"] = parseInt(document.forms["form"]["briefing"].value);
@@ -93,11 +94,23 @@ function commitSubmission() {
         submission["sdate"] = new Date(document.forms["form"]["date"].value + " " + document.forms["form"]["time"].value);
 
         submissions[submissions.length] = submission;
-
         setSubmissions(submissions);
 
-        // sosimo submissions per student
+        // set submissions per student
+        let submissionsPerStudent = getSubmissionsPerStudent();
+        let tableIds = document.getElementsByClassName("id-td");
+        let newStudentIds = new Array();
 
+        for (let i = 0; i < tableIds.length; i++) {
+            newStudentIds.push(parseInt(tableIds[i].innerHTML));
+        }
+
+        let newSubmissionPerStudent = new Object();
+        newSubmissionPerStudent["subid"] = submissionsPerStudent.length + 1;
+        newSubmissionPerStudent["studentsId"] = newStudentIds;
+
+        submissionsPerStudent[submissionsPerStudent.length] = newSubmissionPerStudent;
+        setSubmissionsPerStudent(submissionsPerStudent);
 
         window.open("submissions-list.html", "_self");
     }

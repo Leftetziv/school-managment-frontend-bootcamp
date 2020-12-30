@@ -31,19 +31,16 @@ document.addEventListener("DOMContentLoaded", function () {
         cell.innerHTML = briefings.find(b => b.id == submissions[i - 1]["briefing"])["title"];
 
         cell = row.insertCell(5);
-        let subStudent = "";
-        
-        for (var j = 0; j < submissionsPerStudent.length; j++) {
-            if (submissionsPerStudent[j]["subid"] == subid) {
-                let studId = submissionsPerStudent[j]["studid"];
-                let student = students.find(s => s.id == studId);
-                let fname = student["fname"];
-                let lname = student["lname"];
+        let submissionStudents = "";
+        let subStudentsIds = submissionsPerStudent.find(s => s.subid == subid)["studentsId"];
+        for (var j = 0; j < subStudentsIds.length; j++) {
+            let student = students.find(s => s.id == subStudentsIds[j]);
+            let fname = student["fname"];
+            let lname = student["lname"];
 
-                subStudent += fname +" "+ lname+", ";
-            }
+            submissionStudents += fname + " " + lname + ", ";
         }
-        cell.innerHTML = subStudent;
+        cell.innerHTML = submissionStudents;
 
         cell = row.insertCell(6);
         cell.innerHTML = '<button type="button" class="table-button" onclick="editSubmission(this)" ><i class="material-icons">edit</i>';
