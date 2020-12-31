@@ -106,7 +106,7 @@ function commitSubmission() {
         }
 
         let newSubmissionPerStudent = new Object();
-        newSubmissionPerStudent["subid"] = submissionsPerStudent.length + 1;
+        newSubmissionPerStudent["subid"] = submission["id"]
         newSubmissionPerStudent["studentsId"] = newStudentIds;
 
         submissionsPerStudent[submissionsPerStudent.length] = newSubmissionPerStudent;

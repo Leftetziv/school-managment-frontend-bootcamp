@@ -26,7 +26,7 @@ total mark must be less than max total from briefing -> ok
 oral mark must be less than max oral from briefing -> ok
 
 students per course:
-check if student selections exists based on available options
+check if student selections exists based on available options -> ok
 
 trainer per course:
-check if trainer selections exists based on available options
+check if trainer selections exists based on available options -> ok

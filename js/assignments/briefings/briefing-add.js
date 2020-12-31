@@ -34,8 +34,8 @@ function commitBriefing() {
         briefing["course"] = parseInt(document.forms["form"]["course"].value);
 
         briefings[briefings.length] = briefing;
-
         setBriefings(briefings);
+        
         window.open("briefings-list.html", "_self");
     }
 }
