@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var row;
     var cell;
 
-
     for (var i = 1; i <= briefings.length; i++) {
         row = table.insertRow(i);
 

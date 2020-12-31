@@ -223,31 +223,6 @@ function initialize() {
     setSubmissions(submissions);
 
     let submissionsPerStudent = [
-        // {
-        //     "subid": 1,
-        //     "studid": 1
-        // },
-        // {
-        //     "subid": 1,
-        //     "studid": 2
-        // },
-        // {
-        //     "subid": 2,
-        //     "studid": 3
-        // },
-        // {
-        //     "subid": 2,
-        //     "studid": 4
-        // },
-        // {
-        //     "subid": 3,
-        //     "studid": 1
-        // },
-        // {
-        //     "subid": 4,
-        //     "studid": 2
-        // }
-
         {
             "subid": 1,
             "studentsId": [1, 2]
@@ -264,36 +239,10 @@ function initialize() {
             "subid": 4,
             "studentsId": [2]
         }
-
-
     ];
     setSubmissionsPerStudent(submissionsPerStudent);
 
     let studentsPerCourse = [
-        // {
-        //     "cid": 1,
-        //     "studid": 1
-        // },
-        // {
-        //     "cid": 1,
-        //     "studid": 2
-        // },
-        // {
-        //     "cid": 1,
-        //     "studid": 3
-        // },
-        // {
-        //     "cid": 1,
-        //     "studid": 4
-        // },
-        // {
-        //     "cid": 2,
-        //     "studid": 1
-        // },
-        // {
-        //     "cid": 3,
-        //     "studid": 2
-        // }
         {
             "cid": 1,
             "stud": [1, 2, 3, 4]
@@ -310,10 +259,28 @@ function initialize() {
             "cid": 4,
             "stud": [2, 4]
         }
-
-
     ];
     setStudentsPerCourse(studentsPerCourse);
+
+    let trainersPerCourse = [
+        {
+            "cid": 1,
+            "trainers": [1, 2]
+        },
+        {
+            "cid": 2,
+            "trainers": [1, 2]
+        },
+        {
+            "cid": 3,
+            "trainers": [1, 3]
+        },
+        {
+            "cid": 4,
+            "trainers": [2, 4]
+        }
+    ];
+    setTrainersPerCourse(trainersPerCourse);
 
 }
 

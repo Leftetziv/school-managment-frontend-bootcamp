@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="../../js/form-selectiontable-delete-row.js"></script>
     <script src="../../js/students/student-add-edit-checks.js"></script>
+    <script src="../../js/localstorage.js"></script>
+    <script src="../../js/students/students-per-course.js"></script>
+
 </head>
 
 <body>
@@ -37,13 +40,7 @@
 
                 <div class="span-350-grid-1c">
                     <label for="course">Course:</label>
-                    <select type="type" name="course" id="course">
-                        <option value="" disabled selected>Select the course</option>
-                        <option value="1">CB12 - Java - Full Time</option>
-                        <option value="2">CB12 - Java - Part Time</option>
-                        <option value="3">CB12 - C# - Full Time</option>
-                        <option value="4">CB12 - C# - Part Time</option>
-                        <option value="5">CB13 - Python - Part Time</option>
+                    <select type="type" name="course" id="course" onchange="updatestudentSelections()">
                     </select>
                 </div>
 
@@ -55,14 +52,12 @@
                             <input list="student-list" name="students" id="students"
                                 placeholder="Select a student to enroll him" class="input select-list-input">
                             <datalist id="student-list">
-                                <option value="1 - Student1">Student 1</option>
-                                <option value="2 - Student2">Student 2</option>
-                                <option value="3 - Student3">Student 3</option>
-                                <option value="4 - Student4">Student 4</option>
                             </datalist>
-                            <button type="button" class="select-list-add-button">Enroll Student</button>
+                            <button type="button" class="select-list-add-button" onclick="add()">Enroll Student</button>
                         </div>
-
+                        <div class=" span-350-grid-1c">
+                            <span class="error-msg" id="add-error"></span>
+                        </div>
                         <table>
                             <tr>
                                 <th>Id</th>
@@ -70,29 +65,13 @@
                                 <th>Date of birth</th>
                                 <th></th>
                             </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Leyteris Tzivanis</td>
-                                <td>11-11-1111</td>
-                                <td><button type="button" class="select-list-delete-button" onclick="deleteRow(this)">
-                                        <i class="material-icons">delete</i></button></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Leyteris Tzivanis</td>
-                                <td>11-11-1111</td>
-                                <td><button type="button" class="select-list-delete-button" onclick="deleteRow(this)">
-                                        <i class="material-icons">delete</i>
-                                    </button>
-                                </td>
-                            </tr>
                         </table>
 
                     </fieldset>
                 </div>
 
                 <div class="form-buttons">
-                    <button type="button" class="submit-button" id="confirm-btn">Save</button>
+                    <button type="button" class="submit-button" id="confirm-btn" onclick="updateCourse()">Save</button>
                     <button type="button" class="submit-button" id="return-btn"
                         onclick="cancelToCourse()">Cancel</button>
                 </div>

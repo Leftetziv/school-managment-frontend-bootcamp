@@ -39,6 +39,13 @@ function setStudentsPerCourse(object) {
     localStorage.setItem("studentsPerCourse", JSON.stringify(object));
 }
 
+function setTrainersPerCourse(object) {
+    localStorage.setItem("trainersPerCourse", JSON.stringify(object));
+}
+
+
+
+
 
 function getCourses() {
     return JSON.parse(localStorage.getItem('courses'));
@@ -76,7 +83,10 @@ function getSubmissionsPerStudent() {
     return JSON.parse(localStorage.getItem('submissionsPerStudent'));
 }
 
-
 function getStudentsPerCourse() {
     return JSON.parse(localStorage.getItem('studentsPerCourse'));
+}
+
+function getTrainersPerCourse() {
+    return JSON.parse(localStorage.getItem('trainersPerCourse'));
 }

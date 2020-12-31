@@ -37,7 +37,3 @@ function studentCheck() {
 
     return isOk;
 }
-
-function cancelToCourse() {     //tha metaferthei sto js pou tha xrisimopoiei to students per course
-    window.open("../courses/courses-list.html", "_self");
-}

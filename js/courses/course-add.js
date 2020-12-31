@@ -48,8 +48,26 @@ function commitCourse() {
         course["edate"] = document.forms["form"]["edate"].value ? document.forms["form"]["edate"].value : new Date();
 
         courses[courses.length] = course;
-
         setCourses(courses);
+
+        // put empty object for the new course for students per course
+        let studentsPerCourse = getStudentsPerCourse();
+        let studentsPerNewCourse = new Object();
+        studentsPerNewCourse["cid"] = course["id"];
+        studentsPerNewCourse["stud"] = new Array();
+
+        studentsPerCourse[studentsPerCourse.length] = studentsPerNewCourse;
+        setStudentsPerCourse(studentsPerCourse);
+
+        //put empty object for the new course for trainers per course
+        let trainersPerCourse = getTrainersPerCourse();
+        let trainersPerNewCourse = new Object();
+        trainersPerNewCourse["cid"] = course["id"];
+        trainersPerNewCourse["trainers"] = new Array();
+
+        trainersPerCourse[trainersPerCourse.length] = trainersPerNewCourse;
+        setTrainersPerCourse(trainersPerCourse);
+
         window.open("courses-list.html", "_self");
     }
 }

@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="../../js/form-selectiontable-delete-row.js"></script>
     <script src="../../js/trainers/trainer-add-edit-checks.js"></script>
+    <script src="../../js/localstorage.js"></script>
+    <script src="../../js/trainers/trainers-per-course.js"></script>
 </head>
 
 <body>
@@ -37,64 +39,40 @@
 
                 <div class="span-350-grid-1c">
                     <label for="course">Course:</label>
-                    <select type="type" name="course" id="course">
-                        <option value="" disabled selected>Select the course</option>
-                        <option value="1">CB12 - Java - Full Time</option>
-                        <option value="2">CB12 - Java - Part Time</option>
-                        <option value="3">CB12 - C# - Full Time</option>
-                        <option value="4">CB12 - C# - Part Time</option>
-                        <option value="5">CB13 - Python - Part Time</option>
+                    <select type="type" name="course" id="course" onchange="updateTrainerSelections()">
                     </select>
                 </div>
 
-                <div class="span-600-grid-1c">
-                    <fieldset>
-                        <legend>Trainers teaching</legend>
+                <div class=" span-600-grid-1c">
+                        <fieldset>
+                            <legend>Trainers teaching</legend>
 
-                        <div class="select-list">
-                            <input list="trainers-list" name="trainers" id="trainers"
-                                placeholder="Select a trainer to assign him" class="input select-list-input">
-                            <datalist id="trainers-list">
-                                <option value="1 - trainer 1">Student 1</option>
-                                <option value="2 - trainer 2">Student 2</option>
-                                <option value="3 - trainer 3">Student 3</option>
-                                <option value="4 - trainer 4">Student 4</option>
-                            </datalist>
-                            <button type="button" class="select-list-add-button">Assign Trainer</button>
-                        </div>
+                            <div class="select-list">
+                                <input list="trainers-list" name="trainers" id="trainers"
+                                    placeholder="Select a trainer to assign him" class="input select-list-input">
+                                <datalist id="trainers-list">
+                                </datalist>
+                                <button type="button" class="select-list-add-button" onclick="add()">Assign Trainer</button>
+                            </div>
+                            <div class=" span-350-grid-1c">
+                                <span class="error-msg" id="add-error"></span>
+                            </div>
+                            <table>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Subject</th>
+                                    <th></th>
+                                </tr>
+                            </table>
 
-                        <table>
-                            <tr>
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>Subject</th>
-                                <th></th>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Leyteris Tzivanis</td>
-                                <td>Java</td>
-                                <td><button type="button" class="select-list-delete-button" onclick="deleteRow(this)">
-                                        <i class="material-icons">delete</i></button></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Leyteris Tzivanis</td>
-                                <td>HTML</td>
-                                <td>
-                                    <button type="button" class="select-list-delete-button" onclick="deleteRow(this)">
-                                        <i class="material-icons">delete</i>
-                                    </button>
-                                </td>
-                            </tr>
-                        </table>
-
-                    </fieldset>
+                        </fieldset>
                 </div>
 
                 <div class="form-buttons">
-                    <button type="button" class="submit-button" id="confirm-btn">Save</button>
-                    <button type="button" class="submit-button" id="return-btn" onclick="cancelToCourse()">Cancel</button>
+                    <button type="button" class="submit-button" id="confirm-btn" onclick="updateCourse()">Save</button>
+                    <button type="button" class="submit-button" id="return-btn"
+                        onclick="cancelToCourse()">Cancel</button>
                 </div>
 
             </div>
